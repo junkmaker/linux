@@ -12,8 +12,8 @@ int main(void)
 	setitimer(ITIMER_REAL, &(struct itimerval){{1000,0},{1000.0}}, NULL);
 
 	getitimer(ITIMER_REAL, &e1);	// 開始時間取得
-	usleep(1000000);
-	totalMB = 500;					// 転送したことにする
+	usleep(5000000);
+	totalMB = 5120*512/1024;		// 転送したことにする
 	getitimer(ITIMER_REAL, &e2);	// 終了時間取得
 
 	// 経過時間を求める
